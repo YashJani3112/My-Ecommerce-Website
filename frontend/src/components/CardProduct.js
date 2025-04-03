@@ -1,5 +1,5 @@
 import {React,useState,useEffect} from 'react'
-import {HiOutlineShoppingCart,HiShoppingCart} from "react-icons/all"
+import {HiOutlineShoppingCart,HiShoppingCart} from "react-icons/hi"
 import { Image } from "@chakra-ui/react"
 import {Link } from 'react-router-dom'
 import Rating from './Rating'
