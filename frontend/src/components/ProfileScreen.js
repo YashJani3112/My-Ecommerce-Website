@@ -8,7 +8,7 @@ import wave from './img/wavev.png'
 import { Helmet } from 'react-helmet';
 import {getUserDetails, updateUserProfile} from '../actions/userActions'
 import {listMyOrders } from '../actions/orderActions'
-import { IoIosArrowDown } from 'react-icons/all';
+import { IoIosArrowDown } from 'react-icons/io';
 import HashLoader from "react-spinners/HashLoader";
 
 
@@ -63,8 +63,7 @@ const ProfileScreen = ({location, history}) => {
     if(!userInfo) {
       history.push('/login')
     }else{
-        if(!user.name)
-        {
+      if(!user || !user.name) {  // Check if user exists before accessing user.name
             dispatch(getUserDetails('profile'))
             dispatch(listMyOrders())
         }else{

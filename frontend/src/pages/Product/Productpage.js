@@ -3,8 +3,11 @@ import Rating from '../../components/Rating'
 import {useDispatch, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet';
 
-import {listProductDetails,createproductReview} from '../../actions/productActions'
-import {IoLogoFacebook,AiFillTwitterCircle,AiFillInstagram,AiFillShop,MdDoNotDisturb}  from "react-icons/all"
+import {listProductDetails,createproductReview} from '../../actions/productActions';
+import { IoLogoFacebook } from "react-icons/io";
+import { AiFillTwitterCircle, AiFillInstagram, AiFillShop } from "react-icons/ai";
+import { MdDoNotDisturb } from "react-icons/md";
+
 import { Image,Select,Button, FormControl, FormLabel, Textarea } from "@chakra-ui/react"
 import HashLoader from "react-spinners/HashLoader";
 import {PRODUCT_CREATE_RESET, PRODUCT_CREATE_REVIEW_RESET} from '../../constants/productConstants'

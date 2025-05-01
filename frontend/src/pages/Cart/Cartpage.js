@@ -5,6 +5,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../../actions/cartActions';
 import Empty from '../../components/Empty';
 import Productoncart from '../../components/Productoncart';
+
 import './cartcss.css'
 const Cartpage = ({match,location,history}) => {
     const {id} = match.params;
@@ -20,7 +21,8 @@ const Cartpage = ({match,location,history}) => {
     },[dispatch,id,qty])
 
     const checkoutHandler =()=>{
-        history.push('./login?redirect=shipping');
+        // history.push('./login?redirect=shipping');
+        window.location.href = '/login?redirect=shipping'; // Hard redirect
     }
 
     return (
